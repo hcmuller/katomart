@@ -71,7 +71,7 @@ export default {
 
     <div class="flex justify-center items-center gap-2 text-xl" v-if="isLoading">
       <i class="fa-solid fa-spinner animate-spin"></i>
-      Cerregando cursos... (caso tenha muitos cursos, isso pode demorar um pouco.)
+      Carregando cursos... (caso tenha muitos cursos, isso pode demorar um pouco.)
     </div>
 
     <div class="grid grid-cols-2 gap-4 justify-items-center">
