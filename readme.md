@@ -1,5 +1,9 @@
 # Download de cursos de basicamente todas as plataformas existentes (conforme o acesso for obtido de forma legal)
 
+## Este projeto está sendo refatorado do zero e em breve o código aqui será atualizado.
+Atualmente funciona parcialmente para a Hotmart, em breve ele será melhorado muito, estou para liberar em questão de tempo.  
+E da legalidade, leia o arquivo citado abaixo, aviso.html.
+
 ### Patrocinadores do projeto
 ***Financeiros recebem suporte prioritário e pessoal do desenvolvedor responsável, também aproveitam de descontos para projetos próprios e possuem outros benefícios**  
 Github [![Sponsors](https://img.shields.io/github/sponsors/katomaro)](https://github.com/sponsors/katomaro)  
@@ -16,7 +20,7 @@ Em resumo... **Este repositório não é oficial de nenhuma marca** e apenas o p
 # SEMPRE QUE EXECUTAR O APLICATIVO LEIA O AVISO NA PÁGINA PRINCIPAL (/home)
 Você pode o ler de uma forma crua diretamente [acessando este arquivo do repositório (AVISO.HTML)](https://github.com/katomaro/katomart/blob/master/AVISO.html)
 
-# ## Motivo?
+## Motivo?
 
 Atualmente existe uma moda de publicarem cursos no formato EAD, e está tudo bem. Porém, estas mesmas plataformas tentam bloquear o ato de download do conteúdo. Oras, se eu tenho o conteúdo vitalício e permanente, qual o dano que eu estou causando ao proprietário?  
 Além disso, se eu tenho o direito de consumo, eu não posso ser obrigado a consumir tal material por um meio específico, se o mesmo é acessível a partir de um navegador. **Os aplicativos aqui encontrados apenas replicam a lógica de acesso aos materiais e salvam para o disco local sem fazer o uso de exploits nem nada do tipo**. Pense bem, é inviável acessar mídias em 4k/8k a partir de dados móveis, e aplicativos móveis **coletam dados adicionais sobre você, que eles podem vender ou usar em campanhas de marketing para te fazer gastar**, é um descaso com a LGPD.  
@@ -52,8 +56,7 @@ Agora que o Python está instalado, você pode baixar e executar projetos Python
 3. Abra o Prompt de Comando e navegue até a pasta extraída usando o comando `cd caminho\para\a\sua\pasta`.
 4. Execute o comando `pip install -r requirements.txt` para instalar as dependências do projeto.
 5. Finalmente, execute o projeto com `python katomart.py`.
-6. Siga as instruções da tela, que é ultimamente abrir o seu navegador e ir até o endereço: `http://localhost:6102/`. Após dar o aceite nos termos anti-pirataria (que não são enviados para nenhum local, apenas ficam em registro na sua máquina, pode verificar o código), você irá ver a interface do Katomart.
-![image](https://github.com/katomaro/katomart/assets/53769456/ccef58b7-6827-4aef-a4e4-7caabb8570cf)
+6. Siga as instruções da tela, que é ultimamente abrir o seu navegador e ir até o endereço: `http://localhost:6102/`. Após dar o aceite nos termos anti-pirataria (que não são enviados para nenhum local, apenas ficam em registro na sua máquina, pode verificar o código), você irá ver a interface do Katomart e poderá interagir com o aplicativo.
 
 ## Contribuindo
 ### Código
@@ -82,5 +85,3 @@ Você pode obter ajuda comunitária no [Grupo do Telegram **(AVISO: O Grupo não
 5) Nível 4: Contribuiu com pelo menos 300,00 Reais. Recebem: O mesmo do Tier 3, além de ter o direito de 1 encontro mensal comigo para eu te auxiliar em um projeto seu. Além disso, em diversos casos, irá incluir um vídeo privado de eu explorando a plataforma ao vivo para acompanhar o processo lógico   
 
 6) Nível 5: Contribuiu com pelo menos 350,00 Reais. Recebem: Desconto fixo de 30% em qualquer projeto que a pessoa quiser pegar comigo como desenvolvedor (não incluso contratos com a minha empresa), e inclui "favorzinhos" (assistência técnica/código que eu vejo que não me toma mais que 30 minutos, ou seja, a maioria)  
-
-7) Nível 6: Secreto.
