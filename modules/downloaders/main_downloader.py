@@ -410,8 +410,8 @@ class Downloader:
                 self.account.database_manager.log_event(log_type='WARNING', sensitive_data=0, log_data=f"Baixando a playlist de vídeo: {playlist_url} - {self.current_content_name} - {self.current_module_name} - {self.current_lesson_name} - {self.file_name} ^-^ {self.media_size} bytes")
                 self.download_ytdlp_media(playlist_url, referer=self.current_content_url, save_path=self.download_path, media_index=media_index)
                 self.account.database_manager.log_event(log_type='SUCCESS', sensitive_data=0, log_data=f"Download da playlist de vídeo concluído! ^-^")
-                continue  # Implementação noobinha.
-            return
+                # Implementação noobinha.
+        return
                 # self.current_base_playlist_url = playlist_url.rsplit('/', 1)[0] +'/'
                 # current_master_playstlist_content = self.load_playlist(playlist_url)
 
