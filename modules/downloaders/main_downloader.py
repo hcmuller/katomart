@@ -362,7 +362,7 @@ class Downloader:
         else:
             self.download_raw_file(is_attachment=is_attachment)
         
-        self.post_download()
+        # self.post_download()
     
     def post_download(self) -> None:
         """
