@@ -633,6 +633,8 @@ class Downloader:
         :param save_path: Caminho para salvar o arquivo.
         :param media_index: Índice da mídia a ser salva.
         """
+        errored_out = False
+        error_message = ''
         if url.startswith('//'):
             url = 'https:' + url
         ytdlp_opts = {
@@ -640,11 +642,33 @@ class Downloader:
             'fragment_retries': 6,
             'concurrent_fragment_downloads': int(self.download_threads),
             'outtmpl': save_path.as_posix() + f'/{media_index}. ' + 'Aula.%(ext)s',}
-        with yt_dlp.YoutubeDL(ytdlp_opts) as ytdlp:
-            if referer:
-                ytdlp.params['http_headers'] = {'Referer': referer}
-            ytdlp.download([url])
-        self.account.database_manager.log_event(log_type='SUCCESS', sensitive_data=0, log_data=f"Download de {url} concluído! ^-^")
+        try:
+            with yt_dlp.YoutubeDL(ytdlp_opts) as ytdlp:
+                if referer:
+                    ytdlp.params['http_headers'] = {'Referer': referer}
+                ytdlp.download([url])
+        except yt_dlp.utils.ExtractorError as e:
+            errored_out = True
+            error_message = str(e)
+            if 'This video is private' in error_message:
+                error_message = f"Erro: O vídeo é privado. Detalhes: {error_message}"
+            else:
+                error_message = f"Erro de extrator: {error_message}"
+        except yt_dlp.utils.DownloadError as e:
+            errored_out = True
+            error_message = f"Erro de download: {e}"
+        except yt_dlp.utils.PostProcessingError as e:
+            errored_out = True
+            error_message = f"Erro de pós-processamento: {e}"
+        except Exception as e:
+            errored_out = True
+            error_message = f"Erro genérico: {e}"
+        finally:
+            if errored_out:
+                self.account.database_manager.log_event(log_type='ERROR', sensitive_data=0, log_data=f"Erro ao baixar o vídeo: {url} - {error_message}")
+            else:
+                self.account.database_manager.log_event(log_type='SUCCESS', sensitive_data=0, log_data=f"Download de {url} concluído! ^-^")
+        return
 
     def download_widevine_media(self, url:str, save_path:str):
         """
