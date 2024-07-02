@@ -410,41 +410,41 @@ class Downloader:
                 self.download_ytdlp_media(playlist_url, referer=self.current_content_url, save_path=self.download_path, media_index=media_index)
                 continue  # Implementação noobinha.
             return
-                self.current_base_playlist_url = playlist_url.rsplit('/', 1)[0] +'/'
-                current_master_playstlist_content = self.load_playlist(playlist_url)
+                # self.current_base_playlist_url = playlist_url.rsplit('/', 1)[0] +'/'
+                # current_master_playstlist_content = self.load_playlist(playlist_url)
 
-            playlist = m3u8.loads(current_master_playstlist_content)
-            if self.download_subtitles:
-                if self.subtitle_language.lower() == 'all':
-                    subtitles = [media for media in playlist.media if media.type == 'SUBTITLES']
-                    for subtitle in subtitles:
-                        with open(self.download_path / (self.file_name.rsplit('.', 1)[0] + f"_{subtitle.language}.vtt"), 'wb') as f:
-                            actual_sub = self.request_session.get(self.current_base_playlist_url + subtitle.uri)
-                            subtitle_content = m3u8.loads(actual_sub.text)
-                            sub_ct = self.request_session.get(self.current_base_playlist_url + subtitle_content.segments[0].uri)
-                            f.write(sub_ct.content)
+                # playlist = m3u8.loads(current_master_playstlist_content)
+                # if self.download_subtitles:
+                #     if self.subtitle_language.lower() == 'all':
+                #         subtitles = [media for media in playlist.media if media.type == 'SUBTITLES']
+                #         for subtitle in subtitles:
+                #             with open(self.download_path / (self.file_name.rsplit('.', 1)[0] + f"_{subtitle.language}.vtt"), 'wb') as f:
+                #                 actual_sub = self.request_session.get(self.current_base_playlist_url + subtitle.uri)
+                #                 subtitle_content = m3u8.loads(actual_sub.text)
+                #                 sub_ct = self.request_session.get(self.current_base_playlist_url + subtitle_content.segments[0].uri)
+                #                 f.write(sub_ct.content)
 
-            if playlist.is_variant:
-                highest_bandwidth = 0
-                best_quality_playlist = None
-                for variant in playlist.playlists:
-                    if variant.stream_info.bandwidth > highest_bandwidth:
-                        highest_bandwidth = variant.stream_info.bandwidth
-                        best_quality_playlist = variant
-                self.current_base_playlist_url = playlist_url.rsplit('/', 1)[0] +'/'
-                playlist = m3u8.loads(self.load_playlist(self.current_base_playlist_url + best_quality_playlist.uri))
-                self.selected_quality_url = best_quality_playlist.uri
-            
-            if playlist.version is not None and int(playlist.version) >= 4:
-                self.account.database_manager.log_event(log_type='WARNING', sensitive_data=0, log_data=f"Playlist de vídeo com versão {playlist.version}, pode gerar vídeos corrompidos!")
-                self.need_to_format_segment_url = True
-            else:
-                self.need_to_format_segment_url = False
-
-            if playlist.keys:
-                self.download_encrypted_hls(playlist)
-            else:
-                self.download_raw_hls(playlist)
+                # if playlist.is_variant:
+                #     highest_bandwidth = 0
+                #     best_quality_playlist = None
+                #     for variant in playlist.playlists:
+                #         if variant.stream_info.bandwidth > highest_bandwidth:
+                #             highest_bandwidth = variant.stream_info.bandwidth
+                #             best_quality_playlist = variant
+                #     self.current_base_playlist_url = playlist_url.rsplit('/', 1)[0] +'/'
+                #     playlist = m3u8.loads(self.load_playlist(self.current_base_playlist_url + best_quality_playlist.uri))
+                #     self.selected_quality_url = best_quality_playlist.uri
+                # 
+                # if playlist.version is not None and int(playlist.version) >= 4:
+                #     self.account.database_manager.log_event(log_type='WARNING', sensitive_data=0, log_data=f"Playlist de vídeo com versão {playlist.version}, pode gerar vídeos corrompidos!")
+                #     self.need_to_format_segment_url = True
+                # else:
+                #     self.need_to_format_segment_url = False
+                # 
+                # if playlist.keys:
+                #     self.download_encrypted_hls(playlist)
+                # else:
+                #     self.download_raw_hls(playlist)
 
     def load_playlist(self, playlist_url:str) -> str:
         """
