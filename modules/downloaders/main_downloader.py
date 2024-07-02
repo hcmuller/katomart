@@ -405,8 +405,11 @@ class Downloader:
         current_master_playstlist_content = None
         playlist_url = ''
         if len(data['media_assets']) > 0:
-            for asset in data['media_assets']:
+            for media_index, asset in enumerate(data['media_assets'], start=1):
                 playlist_url = asset.get('url')
+                self.download_ytdlp_media(playlist_url, referer=self.current_content_url, save_path=self.download_path, media_index=media_index)
+                continue  # Implementação noobinha.
+            return
                 self.current_base_playlist_url = playlist_url.rsplit('/', 1)[0] +'/'
                 current_master_playstlist_content = self.load_playlist(playlist_url)
 
@@ -634,7 +637,7 @@ class Downloader:
             'retries': 8,
             'fragment_retries': 6,
             'concurrent_fragment_downloads': int(self.download_threads),
-            'outtmpl': save_path.as_posix() + f'/{media_index}. ' + '%(title)s.%(ext)s',}
+            'outtmpl': save_path.as_posix() + f'/{media_index}. ' + 'Aula.%(ext)s',}
         with yt_dlp.YoutubeDL(ytdlp_opts) as ytdlp:
             if referer:
                 ytdlp.params['http_headers'] = {'Referer': referer}
