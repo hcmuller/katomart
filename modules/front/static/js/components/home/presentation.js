@@ -3,8 +3,9 @@ export default {
   <section class="mt-1">
     <h1 class="text-xl text-center my-2">Boas vindas ao Katomart!</h1>
     <p>
-      O Katomart agora está de cara nova (e passando por cirurgias plásticas) e você pode
-      controlar e acompanhar seu progresso a partir do seu navegador web.
+      Esta versão está deprecada, leia o aviso abaixo. E MUITO CUIDADO COM VERSÕES DE TERCEIROS.
+      Existe um aplicativo de outro desenvolvedor que usa o nome da plataforma da hotmart e expõe os SEUS dados para
+      servidores terceiros. Não seja burro.
       <strong class="text-red-500">
         <span>NÃO FECHE O TERMINAL QUE TE TROUXE ATÉ ESTE SITE</span>
       </strong>
