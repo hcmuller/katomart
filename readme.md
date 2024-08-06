@@ -1,13 +1,23 @@
 # Download de cursos de basicamente todas as plataformas existentes (conforme o acesso for obtido de forma legal)
 
-## Este projeto está sendo refatorado do zero e em breve o código aqui será atualizado.
-Atualmente funciona parcialmente para a Hotmart, em breve ele será melhorado muito, estou para liberar em questão de tempo.  
+## (DEPRECADO) Este projeto está sendo refatorado do zero e em breve o código aqui será atualizado.
+Atualmente mal funciona para a Hotmart devido à mudança de ontem (05/08/2024), a nova versão será publicada até o fim de Agosto/2024.
 E da legalidade, leia o arquivo citado abaixo, aviso.html.
+
+**(Atualização 05/08/2024) Para SPONSORS**: Ontem eu fiz uma correção desta versão atual do github para que ela voltasse a funcionar até o release da nova.  
+Abaixo uma captura de tela deste momento, listando produtos normalmente como sempre :)
+![Patch dia 5](https://i.imgur.com/ftXGgNr.png)
+  
+
+Além disso, a nova versão é extremamente reativa (com interações em tempo real), e pelos testes, zero bloqueios e detecções por causa de 
+uns métodos que estou utilizando com o Geckodriver e código nativo. Ela é infinitamente melhor e fácil de usar tanto para usuários novos e para usuários técnicos, ela permite o controle extremamente fino de tudo que ela faz. Abaixo uma sneak-peek de algumas de suas mais de 200 configurações:
+![Novo Katomart](https://i.imgur.com/yUsTT2b.png)
+Lembram que muitas pessoas tinham problemas com tamanho de path? ;)  
+Além disso, como mencionado em meu grupo, ela possui o uso opcional de uma api para interações especiais e informações, sponsors poderão fazer o uso ilimitado dela. (O uso dela é opcional e não impacta o funcional do programa, apenas melhora o desempenho e aumenta o suporte recebido).
 
 ### Patrocinadores do projeto
 ***Financeiros recebem suporte prioritário e pessoal do desenvolvedor responsável, também aproveitam de descontos para projetos próprios e possuem outros benefícios**  
 Github [![Sponsors](https://img.shields.io/github/sponsors/katomaro)](https://github.com/sponsors/katomaro)  
-Demais contribuidores (financeiros e de dados) podem ser encontrados no arquivo [CONTRIBUTIONS.json](https://github.com/katomaro/katomart/blob/master/CONTRIBUTIONS.json) localizado na raiz do repositório.
 
 ## AVISO IMPORTANTE / DISCLAIMER
 
@@ -67,21 +77,6 @@ Se encontrar um problema, utilize a aba [ISSUES](https://github.com/katomaro/kat
 Para que este aplicativo seja feito, é necessário que a pessoa produzindo o código tenha o acesso à plataforma alvo em seu nome (se não configuraria violação de direitos autorais). Existe uma brecha nisso onde você pode isentar o desenvolvedor e ainda assim passar informações da plataforma para o mesmo, abra uma issue solicitando assistência para editar o arquivo HAR que você deve gerar como descrito neste [artigo da Wiki]() e aguarde o [@katomaro](https://github.com/sponsors/katomaro) responder. Desenvolver esta aplicação leva inúmeras horas de suporte à usuário, correção de bugs, estudo de tecnologias especializadas e implementações. Caso queira ajudar a custear isto tudo e se tornar um patrocinador, você pode utilizar o próprio [Github Sponsors](https://github.com/sponsors/katomaro) para o meu perfil porém eu acredito que ele cobre em dólar, à direita deste texto existem outras formas de contribuir também em reais (tais como pix e etc), todo valor faz diferença. Ao rodar a aplicação, você também pode ver os desenvolvedores relevantes para o aplicativo e suas responsabilidades, e como você pode contribuir para eles, basta ir até a página de [Suporte](http://127.0.0.1:6102/support) e identificar os cards de cada desenvolvedor. E ah, caso decida patrocinar financeiramente, por favor, siga as instruções de enviar um e-mail informando se tem alguma mensagem para compartilhar (pode ser propaganda, desde que legal), e como você quer que seu nome apareça na lista de contribuidores. O mesmo vale para quem contribuir com informações de plataforma, exceto que estes não recebem suporte prioritário nem podem incluir mensagens.
 
 ### Suporte
-**Patrocinadores tem suporte prioritário  e pessoal comigo para qualquer finalidade dentro da lei**: Tornou-se um patrocinador? Entre em contato em [sponsors@katomaro.com](mailto:sponsors@katomaro.com).  
+**Patrocinadores tem suporte prioritário  e pessoal comigo para qualquer finalidade dentro da lei**: Tornou-se um patrocinador? Entre em contato em [sponsors@katomaro.com](mailto:sponsors@katomaro.com), ou pelo Telegram [@Katomaro](https://t.me/katomaro).  
 
-Você pode obter ajuda comunitária no [Grupo do Telegram **(AVISO: O Grupo não é moderado e nem voltado para um assunto específico)**](https://t.me/katomart). Caso você necessite de ajuda com algo que **trate com dados sensíveis**, entre em contato comigo através do meu email: [github@katomaro.com](mailto:github@katomaro.com), ou diretamente em minhas contas pessoais do Telegram e Discord através do usuário **@katomaro**. Solicitações de ajuda pessoal de não-patrocinadores não são prioritárias, e existe toda uma documentação para ser lida, provavelmente a sua pergunta está respondida em algum lugar.
-
-
-### Tiers de Suporte
-
-1) Nível 0: Não contribuiu com nada, mas está usufruindo do projeto, assim como todos que contribuíram. NADA ficará atrás de um muro de pagamento, isto não é venda de serviço!  
-
-2) Nível 1: Contribuiu com pelo menos de 35,00 Reais, ou fez uma contribuição pequena de código, ou ajuda as vezes no grupo da comunidade. Recebem: Suporte prioritário 1:1 comigo. Pode parecer pouco ou bobo, mas dependendo da época eu recebo mais de 100 chats por dia. É importante ressaltar que o Katomart é feito para funcionar e tem uma documentação sendo elaborada e um grupo comunitário para se ajudarem, você apenas me dá um motivo para eu dedicar parte do meu tempo exclusivamente para você, dentro do possível, ao invés de eu encaminhar para documentação, é muita gente para eu lidar (não coleto dados, mas estimo entre 60 mil a 150 mil usuários do software historicamente, com base no que vejo comentarem nos grupos e os causos de plágio e vendas não autorizadas documentados).  
-
-3) Nível 2: Contribuiu com pelo menos 150,00 Reais, ou fez uma contribuição considerável de código, ou ajuda frequentemente no grupo da comunidade. Recebem: Acesso à um gitlab privativo meu que possui o código cru de cada plataforma explorada por mim, ideal para quem tem seus projetos pessoais e querem ver o que plataformas aleatórias praticam no mercado, de uma forma digerida. ESTE REPOSITÓRIO CONTÉM APENAS CÓDIGO E COMENTÁRIOS PONTUAIS.  
-
-4) Nível 3: Contribuiu com pelo menos 250,00 Reais. Recebem: Acesso à um gitlab privativo meu que possui o código cru de cada plataforma explorada por mim, DIFERENÇA DO NÍVEL ANTERIOR: Aqui você encontrará toda a documentação e explicação verbosa de cada trecho de código elaborado por mim e retornos de plataforma. Também neste repositório PODEM existir endpoints vulneráveis e documentadas que podem ser exploradas que eu descobri. IMPORTANTE: Eu sempre denuncio essas falhas para as plataformas, e publicaria essas falhas 1 mês após realizar minha denúncia, com uma print validando que eu tentei contato com eles expondo a falha, se eles não corrigiram, bem, qualquer um poderia encontrar, peço que não a utilize para fins maliciosos. Um exemplo prático: Nos meus tempos primordiais eu sabia que podia baixar todo o conteúdo da :fire: simplesmente enviando a ID do vídeo para a endpoint de anexo deles, você baixava o arquivo original inclusive, nem era o processado para HLS, eles demoraram 3 meses para corrigir essa falha. Esse Tier é ideal para quem quer o equivalente de aula comigo mas já tem alguma experiência com programação.  
-
-5) Nível 4: Contribuiu com pelo menos 300,00 Reais. Recebem: O mesmo do Tier 3, além de ter o direito de 1 encontro mensal comigo para eu te auxiliar em um projeto seu. Além disso, em diversos casos, irá incluir um vídeo privado de eu explorando a plataforma ao vivo para acompanhar o processo lógico   
-
-6) Nível 5: Contribuiu com pelo menos 350,00 Reais. Recebem: Desconto fixo de 30% em qualquer projeto que a pessoa quiser pegar comigo como desenvolvedor (não incluso contratos com a minha empresa), e inclui "favorzinhos" (assistência técnica/código que eu vejo que não me toma mais que 30 minutos, ou seja, a maioria)  
+Você pode obter ajuda comunitária no [Grupo do Telegram **(AVISO: O Grupo não é moderado e nem voltado para um assunto específico)**](https://t.me/GatosDodois). Caso você necessite de ajuda com algo que **trate com dados sensíveis**, entre em contato comigo através do meu email: [github@katomaro.com](mailto:github@katomaro.com), ou diretamente em minhas contas pessoais do Telegram e Discord através do usuário **@katomaro**. Solicitações de ajuda pessoal de não-patrocinadores não são prioritárias e vão cair na fila, e existe toda uma documentação para ser lida, provavelmente a sua pergunta está respondida em algum lugar.  
