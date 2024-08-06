@@ -52,12 +52,12 @@ export default {
       <p>
         Caso você não consiga acessar o Github, você pode pedir suporte
         <strong class="text-red-500">COMUNITÁRIO</strong> no grupo do Telegram:
-        <a href="https://t.me/gatoverso" class="text-pink-500 underline hover:text-pink-400">
-            <strong>https://t.me/gatoverso</strong>
+        <a href="https://t.me/GatosDodois" class="text-pink-500 underline hover:text-pink-400">
+            <strong>https://t.me/GatosDodois</strong>
         </a>.
         <strong class="text-red-500">NÃO ENVIE INFORMAÇÕES SENSÍVEIS NESTE GRUPO!</strong>
-        Além disso, atente-se as regras do grupo que ficam nas mensagens fixadas,
-        denotadas como <strong class="text-red-500">"Constituição Gatarial"</strong>.
+        Além disso, atente-se que este grupo não possui muitas regras, uso do bom senso
+        e <strong class="text-red-500">respeite os tópicos!</strong>.
         Lembre-se: Ao participar do grupo para falar sobre o programa, você continua sujeito
         aos termos que você concordou nos
         <a href="{{ url_for('agreement') }}" class="text-primary underline hover:text-primary-dark">
